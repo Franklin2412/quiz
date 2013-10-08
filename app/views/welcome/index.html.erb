@@ -1,0 +1,36 @@
+<% provide(:title, "Try out") %>
+
+
+<div id="welcome_index">
+	<% @questions.each do |q| %>
+		<p>
+			<%= form_for(q, url: check_question_path(q), html: {method: "get"} ) do |f| %>
+
+				<h1><%= q.question %> </h1> <br>
+				<span>
+				<%= f.radio_button :user_answer, "A", { :checked => false } %>
+				<%= q.answer1 %><br>
+				</span>
+				<span>
+				<%= f.radio_button :user_answer, "B", { :checked => false } %>
+				<%= q.answer2 %><br>
+				</span>
+				<span>
+				<%= f.radio_button :user_answer, "C", { :checked => false } %>
+				<%= q.answer3 %><br>
+				</span>
+				<span>
+				<%= f.radio_button :user_answer, "D", { :checked => false } %>
+				<%= q.answer4 %><br>
+				</span>
+				<span id="welcome_index_submit">
+				<%= f.submit "Answer" %>
+				</span><br>
+				<%= link_to "View Answer", question_path(q) %>
+			<% end %>
+		</p>
+<% end %>
+
+<%= link_to "Next Question", root_path %>
+
+<%= link_to "Add Question", new_question_path %>

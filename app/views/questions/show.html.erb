@@ -1,0 +1,20 @@
+<% provide(:title, "#{@question.question}") %>
+
+<div id="question_show">
+	<h1>
+		<%= @question.question %>
+	</h1>
+	<p><strong> 
+		Answers 
+	</strong></p>
+	<p> A. <%= @question.answer1 %> </p>
+	<p> B. <%= @question.answer2 %> </p>
+	<p> C. <%= @question.answer3 %> </p>
+	<p> D. <%= @question.answer4 %> </p>
+	<p> Ans. <%= @question.correct_answer %> </p>
+
+	<%= link_to "Questions List", questions_path %>
+	<%= link_to "Edit", edit_question_path(@question) %>
+	<%= link_to "Next Question", root_path %>
+</div>
+

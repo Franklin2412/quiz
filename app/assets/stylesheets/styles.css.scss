@@ -1,0 +1,148 @@
+h1,h2,div,body,ul,li,a,p,img,span {
+ 	margin:0px;
+ 	padding:0px;
+ 	border:0px;
+ 	font-size:100%;
+}
+body {
+	margin-top: 50px;
+	font-family: Arial;
+}
+input[type="text"] {
+	padding-top: 5px;
+	border-radius: 5px;
+
+}
+textarea {
+	resize: vertical;
+	height: 50px;
+	
+	padding: 5px;
+	border-radius: 5px;
+
+}
+input[type="text_field"] {
+	padding: 5px;
+	border-radius: 5px;
+
+}
+input[type="submit"] {
+	padding: 7px;
+	background: #4d90fe;
+	opacity: .9;
+	box-shadow: none;
+	border: 1px solid #4d90fe;
+	color: #fff;
+}
+#wrapper {
+ 	width: 70%;
+ 	margin: 0px auto;
+ 	border: 1px solid green;
+ 	background-color: rgba(102, 102, 102, 0.1);
+}
+#welcome_index {
+	padding: 20px 10%;
+}
+#welcome_index h1 {
+	font-size: 3em;
+}
+#welcome_index span {
+	font-size: 2em;
+}
+#welcome_index submit {
+	marging-top: 50px;
+} 
+#welcome_index a {
+	text-decoration: none;
+	display: block;
+ 	margin-top: 20px;
+}
+#question_show {
+	padding: 20px 10%;
+}
+#question_show h1 {
+	font-size: 3em;
+}
+#question_show p {
+	font-size: 2em;
+	margin: 10px;
+}
+#question_show a {
+	text-decoration: none;
+	display: inline;
+	margin-right: 20px;
+}
+#question_index {
+	padding: 20px 10%;
+}
+#question_index h1 {
+	font-size: 2em;
+}
+#question_index ol {
+	font-size: 1.5em;
+	padding-top: 20px;
+	margin: 10px;
+}
+#question_index ol li {
+	padding: 0px 5px;
+}
+#question_index a {
+	text-decoration: none;
+	display: inline;
+	margin-right: 20px;
+}
+#question_new {
+	padding: 20px 10%;
+}
+#question_new h1 {
+	font-size: 2em;
+}
+#question_new p {
+	font-size: 1.5em;
+	margin: 10px;
+}
+#question_new p input[type="text"] {
+	width: 100%;
+}
+#question_new p textarea {
+	width: 100%;
+}
+#question_new a {
+	text-decoration: none;
+	margin-right: 20px;
+}
+#question_edit  {
+	padding: 20px 10%;
+}
+#question_edit h1 {
+	font-size: 2em;
+}
+#question_edit p {
+	font-size: 1.5em;
+	margin: 10px;
+}
+#question_edit p input[type="text"]{
+	width: 100%;
+}
+#question_edit p textarea {
+	width: 100%;
+}
+#question_edit a {
+	text-decoration: none;
+	margin-right: 20px;
+}
+#flash-success { 
+	background: #ADFF2F;	
+	text-align: center;
+	padding: 5px;
+}
+#flash-failure {
+	background: #FFB6C1;	
+	text-align: center;
+	padding: 5px;
+}
+#flash-notice {
+	background: #9ACD32;
+	text-align: center;
+	padding: 5px;
+}

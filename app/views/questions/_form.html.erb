@@ -1,0 +1,47 @@
+<%= form_for @question do |f| %>
+	<div id="question_form">
+		<% if @question.errors.any? %>
+			<%= pluralize(@question.errors.count, "error") %> Prohibited from being saved: 		
+		<% end %>
+		<ol>
+			<% @question.errors.full_messages.each do |msg| %>
+		
+				<li> <%= msg %> </li>
+			<% end %>
+		</ol>
+	</div>
+
+	<p>
+	<%= f.label :question %><br>
+	<%= f.text_area :question %>
+	</p>
+
+	<p>
+	<%= f.label :answer1, "A"%><br>
+	<%= f.text_field :answer1 %>
+	</p>
+
+	<p>
+	<%= f.label :answer2, "B"%><br>
+	<%= f.text_field :answer2 %>
+	</p>
+
+	<p>
+	<%= f.label :answer3, "C"%><br>
+	<%= f.text_field :answer3 %>
+	</p>
+
+	<p>
+	<%= f.label :answer4, "D"%><br>
+	<%= f.text_field :answer4 %>
+	</p>
+
+	<p>
+	<%= f.label :correct_answer %><br>
+	<%= f.text_field :correct_answer %>
+	</p>
+
+	<p>
+	<%= f.submit %>
+	</p>
+<% end %>

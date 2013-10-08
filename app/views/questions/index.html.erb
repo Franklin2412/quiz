@@ -1,0 +1,16 @@
+<% provide(:title, "List of Questions") %>
+
+<div id="question_index">
+	<h1> Question's List </h1>
+
+	<ol>
+		<% @questions.each do |q| %>
+			
+				<li> <%= q.question %> <%= link_to "edit", edit_question_path(q) %> </li>
+			
+		<% end %>
+	</ol>
+	
+	<%= link_to "Create Question", new_question_path %>
+	<%= link_to "try out", root_path %>
+</div>
