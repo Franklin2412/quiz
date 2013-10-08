@@ -6,5 +6,4 @@ class Question < ActiveRecord::Base
 	validates :answer3,  presence: true
 	validates :answer4,  presence: true
 	validates :correct_answer, presence: true
-	validates :user_answer, presence: true
 end
