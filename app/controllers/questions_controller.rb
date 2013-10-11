@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-	
+	 
 	def new
 		@question = Question.new
 	end
@@ -35,18 +35,19 @@ class QuestionsController < ApplicationController
 	end 
 
 	def check
+		@user = current_user
 		@question = Question.find(params[:id])
 		if @question.update(params.require(:question).permit(:user_answer))
 			if @question.correct_answer == @question.user_answer
-				flash[:success] = "Your Answer is Correct!, Try Next Question!"
-				redirect_to root_path
-				
+				@user.increment! :score, 1
+				@user.increment! :total_score, 1
+				redirect_to welcome_index_path
 			else
-				
-				flash[:failure] = "Sorry! Your answer is Wrong!. The correct answer is #{@question.correct_answer}, Try next question!."
-				redirect_to root_path
+				redirect_to welcome_index_path
 				
 			end
+		else
+			redirect_to root_path
 		end
 	end
 

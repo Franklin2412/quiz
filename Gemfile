@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer', platforms: :ruby
 
 gem 'execjs'
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,6 +47,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'

@@ -1,5 +1,4 @@
 class Question < ActiveRecord::Base
-
 	validates :question, presence: true, uniqueness: { case_sensitive: true }
 	validates :answer1,  presence: true
 	validates :answer2,  presence: true

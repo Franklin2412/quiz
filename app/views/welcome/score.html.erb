@@ -1,0 +1,6 @@
+<% provide(title: "Score") %>
+<div id="score">
+	<p> Your Curent Score is <%= @user.score %> </p>
+	<p> Your Total Score is <%= @user.total_score %></p>
+	<P><%= link_to "Next Question", welcome_index_path %> </P>
+</div>

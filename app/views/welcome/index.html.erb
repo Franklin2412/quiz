@@ -1,6 +1,6 @@
 <% provide(:title, "Try out") %>
 
-
+ 
 <div id="welcome_index">
 	<% @questions.each do |q| %>
 		<p>
@@ -31,6 +31,7 @@
 		</p>
 <% end %>
 
-<%= link_to "Next Question", root_path %>
+<%= link_to "Score", welcome_score_path %>
+<%= link_to "Next Question", welcome_index_path %>
 
 <%= link_to "Add Question", new_question_path %>

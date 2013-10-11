@@ -1,13 +1,17 @@
 Quiz::Application.routes.draw do
   
- 
-
-  root "welcome#index"
-
+  devise_for :users
+  #root "welcome#index"
+  get "welcome/index"
+  get "welcome/score"
   resources :questions do
     get 'check', on: :member
   end
 
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
